@@ -1,0 +1,27 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=827846
+	// for the documentation about the extensions.json format
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"editorconfig.editorconfig",
+		"aaron-bond.better-comments",
+		"github.vscode-pull-request-github",
+		"streetsidesoftware.code-spell-checker",
+		"jasonnutter.vscode-codeowners",
+		"googlecloudtools.cloudcode",
+		"ms-azuretools.vscode-docker",
+		"mikestead.dotenv",
+		"donjayamanne.githistory",
+		"cschleiden.vscode-github-actions",
+		"codezombiech.gitignore",
+		"eamodio.gitlens",
+		"znck.grammarly",
+		"hashicorp.terraform",
+		"atlassian.atlascode",
+		"ms-kubernetes-tools.vscode-kubernetes-tools",
+		"pkief.material-icon-theme",
+		"42crunch.vscode-openapi",
+		"dhedgecock.ember-syntax",
+		"esbenp.prettier-vscode"
+	]
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+		"module": "commonjs",
+    "target": "es2019",
+    "lib": ["es2019", "dom"],
+    "types": ["cypress", "node"],
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"pretty": true,
+		"sourceMap": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"noImplicitOverride": true,
+		"declaration": true,
+  },
+  "include": ["**/*.ts"],
+	"exclude": [
+		"./node_modules/",
+		"./tests/mock/**",
+		"./**/__mocks__"
+	]
+}

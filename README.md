@@ -1,10 +1,10 @@
-# Turborepo starter
+# Whitebox QA Engineer Testing Monorepo
 
-This is an official pnpm starter turborepo.
+This Monorepo contains all setup necessary for Potential QA Engineers to use their knowledge to create automation tests using the Whitebox Tech Stack.
 
 ## What's inside?
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+This repo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
 
 ### Apps and Packages
 
@@ -13,6 +13,7 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 - `ui`: a stub React component library shared by both `web` and `docs` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `cypress`: e2e testing framework used at Whitebox.
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -23,6 +24,25 @@ This turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+
+### Installation
+
+Make sure [NodeJs](https://nodejs.dev/en/) is installed at latest version. It is recommended to install [nvm](https://github.com/nvm-sh/nvm) to manage node installation versions.
+
+After installation of Node switch to the latest stable version.
+
+```
+nvm install stable
+nvm use stable
+```
+
+Then you will need to install [pnpm](https://pnpm.io).
+
+Finally, you can install all projects in the repo.
+
+```
+pnpm install
+```
 
 ### Build
 
