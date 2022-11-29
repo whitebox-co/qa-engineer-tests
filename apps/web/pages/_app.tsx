@@ -10,16 +10,18 @@ import PageChange from "../components/PageChange";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "styles/tailwind.css";
 import { NextPage } from "next";
+import { ScriptProps } from "next/script";
 
-type GetLayout = (page: ReactNode) => ReactNode;
-
-type Page<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: GetLayout;
+type Page<P = Record<string, never>> = NextPage<P> & {
+  layout: (page: ScriptProps) => JSX.Element;
 };
 
-type MyAppProps<P = {}> = AppProps<P> & {
-  Component: Page<P>;
+type Props = AppProps & {
+  Component: Page;
 };
+
+const Noop = ({ children }: ScriptProps) => <>{children}</>;
+
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -32,9 +34,8 @@ Router.events.on("routeChangeStart", (url) => {
   }
 });
 
-export default function MyApp({ Component, pageProps }: MyAppProps): JSX.Element {
-  const defaultGetLayout: GetLayout = (page: ReactNode): ReactNode => page;
-  const getLayout = Component.getLayout ?? defaultGetLayout
+export default function MyApp({ Component, pageProps }: Props): JSX.Element {
+  const Layout = Component.layout || Noop;
 
   useEffect(() => {
     const pageTransitionElement = document.getElementById("page-transition");
@@ -59,7 +60,9 @@ export default function MyApp({ Component, pageProps }: MyAppProps): JSX.Element
         />
         <title>Whitebox QA Engineer Testing App</title>
       </Head>
-        {getLayout(<Component {...pageProps} />)}
+         <Layout>
+          <Component {...pageProps} />
+        </Layout>
     </React.Fragment>
   );
 }

@@ -42,7 +42,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <Image
+        <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
           src="/img/pattern_nextjs.png"
           alt="..."
