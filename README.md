@@ -7,7 +7,10 @@ This Monorepo contains all setup necessary for QA Engineers Candidates to use th
 1. A Fork of this repository should be created against this repo's `main` branch.
 2. All tests should run using the existing package tooling for each test type. (Do not create new package scripts to run them)
 3. Spend no more than a few hours total on this exercise.
-4. When you are finished with the test Create a PR against the `@whitebox-co/qa-engineer-tests` `main` branch.
+4. When you are finished with the tests, Commit and Push your changes to your forked repo, and then create a PR against the `@whitebox-co/qa-engineer-tests` `main` branch.
+5. If you would prefer to skip the PR step, simply send us a link to your repository.
+
+**NOTE:** We will run your tests after you send us your PR or a link to your repository, so make sure they are in working order.
 
 ### Cypress
 
