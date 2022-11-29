@@ -45,8 +45,9 @@ Extra Points For:
 
 Extra Points For:
 
-- Breaking the API - Test those LIMITS!
+- Breaking the API - Test Paths, Body Properties, Query Params, Custom Headers, Etc (Try and break stuff)
 - Writing a script to convert between the two.
+- You can tell us what is not properly implemented (We have intentionally left stuff out) - And Things do not intentionally work as expected!
 
 ## What's inside?
 
