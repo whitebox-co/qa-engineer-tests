@@ -31,12 +31,15 @@ Extra Points for:
 
 1. All Tests should be done against the [Public API](https://localhost:3002)
 2. Create any K6 tests necessary to demonstrate your knowledge of the [different testing types](https://k6.io/docs/test-types/)
-3. All tests should be properly organized representing the api's tested and the type of test.
+3. All tests should be properly organized representing the api's tested and the type of test and put in the `testing/k6` folder
 4. Tests should be documented as to their purpose. Please use jsdoc comments where possible.
+5. Tests can be javascript or typescript although the `testing/k6` folder is setup to use typescript.
 
 Extra Points For:
 
 - Breaking the API - Test those LIMITS!
+- Bonus points for using typescript in your tests
+- Bonus points for getting the project setup like [k6-typescript-framework](https://github.com/go-automate/k6-typescript-framework) which the project folder is based off of but using the whitebox api and data structures.
 
 ### Postman / Insomnia
 
