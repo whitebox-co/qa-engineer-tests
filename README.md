@@ -4,9 +4,10 @@ This Monorepo contains all setup necessary for QA Engineers Candidates to use th
 
 ## Testing Expectations
 
-1. A Branch of this repository should be created against this repo's `main` branch.
+1. A Fork of this repository should be created against this repo's `main` branch.
 2. All tests should run using the existing package tooling for each test type. (Do not create new package scripts to run them)
 3. Spend no more than a few hours total on this exercise.
+4. When you are finished with the test Create a PR against the `@whitebox-co/qa-engineer-tests` `main` branch.
 
 ### Cypress
 
@@ -108,7 +109,7 @@ pnpm run dev
 Doing so will launch the following:
 
 - [Web App](http://localhost:3000) - Main Web App for the QA Engineer Test
-- [Web App](http://localhost:3001) - Documentation Web App **(Not Yet Used)**
+- [Documentation Web App](http://localhost:3001) - Documentation Web App **(Not Yet Used)**
 - [Public API](http://localhost:3002) - Main REST API for the QA Engineer Test
 
 ### E2E Testing
