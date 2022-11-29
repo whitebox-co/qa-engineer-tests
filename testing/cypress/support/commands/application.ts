@@ -1,5 +1,5 @@
 import defaults from '../../fixtures/default.json';
 
-Cypress.Commands.add('joshTest', (linkName) => {
-	cy.contains('.sidebar li', linkName).click();
+Cypress.Commands.add('hasTitle', () => {
+	cy.get('body h1').should('exist');
 });

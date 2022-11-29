@@ -21,7 +21,7 @@ interface ApiCallParams {
 declare global {
 	namespace Cypress {
 		interface Chainable {
-			joshTest(linkName: string): Chainable<void>;
+			hasTitle(): Chainable<void>;
 		}
 	}
 }

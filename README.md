@@ -1,6 +1,25 @@
 # Whitebox QA Engineer Testing Monorepo
 
-This Monorepo contains all setup necessary for Potential QA Engineers to use their knowledge to create automation tests using the Whitebox Tech Stack.
+This Monorepo contains all setup necessary for QA Engineers Candidates to use their knowledge to create automated tests using the Whitebox Tech Stack.
+
+## Testing Expectations
+
+1. A Branch of this repository should be created against this repo's `main` branch.
+2. Create Cypress tests that test as much of the site as possible (Dashboard, Settings, Tables) Admin pages.
+3. All Cypress tests should be organized and created using BDD (Behavior Driven Development) methodology.
+4. All tests should be in files that represent their UI route.
+5. All Cypress tests should go under the testing/cypress/e2e folder.
+6. All Cypress tests should use either Arrange-Act-Assert Pattern or the BDD version Given-When-Then but should not use both.
+7. Where Cypress Tests are not possible, create manual tests and add them to a .md document stating why it is not possible or why it is not a good idea to test in an automated fashion. 
+
+Extra Points for:
+
+- Showing knowledge of different CSS selectors in your tests.
+- Reuse of functions for similar areas of code.
+- Creation of Cypress Commands to reuse code.
+- Interception of Network Calls.
+- Aliasing of Intercepts.
+- Using Fixtures to represent data.
 
 ## What's inside?
 
@@ -9,7 +28,7 @@ This repo uses [pnpm](https://pnpm.io) as a package manager. It includes the fol
 ### Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app - The base of the app is a modified template from [Creative Tim](https://www.creative-tim.com/) called [Notus-NextJs](https://github.com/creativetimofficial/notus-nextjs)
 - `ui`: a stub React component library shared by both `web` and `docs` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
@@ -27,7 +46,7 @@ This turborepo has some additional tools already setup for you:
 
 ### Installation
 
-Make sure [NodeJs](https://nodejs.dev/en/) is installed at latest version. It is recommended to install [nvm](https://github.com/nvm-sh/nvm) to manage node installation versions.
+Make sure [NodeJs](https://nodejs.dev/en/) is installed at the latest version. It is recommended to install [nvm](https://github.com/nvm-sh/nvm) to manage node installation versions.
 
 After installation of Node switch to the latest stable version.
 
@@ -49,7 +68,6 @@ pnpm install
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 pnpm run build
 ```
 
@@ -58,9 +76,30 @@ pnpm run build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 pnpm run dev
 ```
+
+### E2E Testing
+
+#### UI Driven
+
+To run e2e tests, run the following command:
+
+```
+pnpm run test:e2e
+```
+
+Which will run any API, UI, and then bring up the Cypress UI to select individual tests to test against.
+
+#### Headless
+
+To run e2e tests in headless mode, run the following command:
+
+```
+pnpm run test:e2e:headless
+```
+
+Which will run any API, UI, and then run the cypress tests in headless mode.
 
 ### Remote Caching
 
@@ -80,14 +119,3 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 ```
 pnpm dlx turbo link
 ```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
