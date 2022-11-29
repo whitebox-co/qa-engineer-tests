@@ -57,6 +57,7 @@ This repo uses [pnpm](https://pnpm.io) as a package manager. It includes the fol
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app - The base of the app is a modified template from [Creative Tim](https://www.creative-tim.com/) called [Notus-NextJs](https://github.com/creativetimofficial/notus-nextjs)
 - `ui`: a stub React component library shared by both `web` and `docs` applications
+- `public-api`: a simple REST API using [NestJS](https://nestjs.com/)
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 - `cypress`: e2e testing framework used at Whitebox.
