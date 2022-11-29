@@ -120,7 +120,25 @@ Doing so will launch the following:
 - [Documentation Web App](http://localhost:3001) - Documentation Web App **(Not Yet Used)**
 - [Public API](http://localhost:3002) - Main REST API for the QA Engineer Test
 
+### Testing
+
+The easiest way to get to a place where you can test the applications is to simly run the following from the repository root
+
+```
+pnpm dev 
+```
+
+This will spin up the following applications
+
+- [Web App](http://localhost:3000) - Main Web App for the QA Engineer Test
+- [Documentation Web App](http://localhost:3001) - Documentation Web App **(Not Yet Used)**
+- [Public API](http://localhost:3002) - Main REST API for the QA Engineer Test
+
 ### E2E Testing
+
+**NOTE:** Please keep in mind though that if you have any `pnpm dev` command or any other apps running you must first stop them
+before running any of the e2e commands below. Additionally, please note that you must make sure ports 3000-3002 are not in use by any other app. 
+
 
 #### UI Driven
 
