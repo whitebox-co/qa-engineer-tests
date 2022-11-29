@@ -10,6 +10,18 @@ import CardSocialTraffic from "../../components/CardSocialTraffic";
 
 import Admin from "../../layouts/Admin";
 
+// This gets called on every request
+export async function getServerSideProps() {
+  const response = await fetch("http://localhost:3000/api/user", {
+    method: "GET",
+  });
+  
+  const data = await response.json();
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
 export default function Dashboard() {
   return (
     <>
