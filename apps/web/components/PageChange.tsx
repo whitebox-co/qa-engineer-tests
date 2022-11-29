@@ -1,6 +1,6 @@
 
 
-export default function PageChange(props) {
+export default function PageChange(props: {path: string}) {
   return (
     <div>
       <div

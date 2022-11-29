@@ -9,6 +9,15 @@ export default function CardStats({
   statDescripiron,
   statIconName,
   statIconColor,
+}: { 
+  statSubtitle: string; 
+  statTitle: string, 
+  statArrow: string, 
+  statPercent: string, 
+  statPercentColor: string, 
+  statDescripiron: string, 
+  statIconName: string, 
+  statIconColor: string 
 }) {
   return (
     <>

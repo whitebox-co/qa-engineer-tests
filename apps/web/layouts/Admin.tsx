@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import HeaderStats from "../components/HeaderStats";
 import FooterAdmin from "../components/FooterAdmin";
 
-export default function Admin({ children }) {
+export default function Admin({ children }: {children: JSX.Element | JSX.Element[]}) {
   return (
     <>
       <Sidebar />

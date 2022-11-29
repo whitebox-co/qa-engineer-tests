@@ -1,15 +1,18 @@
 import React from "react";
 import { createPopper } from "@popperjs/core";
+import Image from 'next/image'
 
 const UserDropdown = () => {
   // dropdown props
   const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
-  const btnDropdownRef = React.createRef();
-  const popoverDropdownRef = React.createRef();
+  const btnDropdownRef = React.createRef() as React.RefObject<HTMLAnchorElement>;
+  const popoverDropdownRef = React.createRef() as React.RefObject<HTMLDivElement>;
   const openDropdownPopover = () => {
-    createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
-      placement: "bottom-start",
-    });
+     if (btnDropdownRef !== null && popoverDropdownRef !== null) {
+      createPopper(btnDropdownRef.current as Element, popoverDropdownRef.current as HTMLElement, {
+        placement: "bottom-start",
+      });
+    }
     setDropdownPopoverShow(true);
   };
   const closeDropdownPopover = () => {
@@ -28,7 +31,7 @@ const UserDropdown = () => {
       >
         <div className="items-center flex">
           <span className="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
-            <img
+            <Image
               alt="..."
               className="w-full rounded-full align-middle border-none shadow-lg"
               src="/img/team-1-800x800.jpg"
