@@ -5,12 +5,17 @@ This Monorepo contains all setup necessary for QA Engineers Candidates to use th
 ## Testing Expectations
 
 1. A Branch of this repository should be created against this repo's `main` branch.
-2. Create Cypress tests that test as much of the site as possible (Dashboard, Settings, Tables) Admin pages.
-3. All Cypress tests should be organized and created using BDD (Behavior Driven Development) methodology.
-4. All tests should be in files that represent their UI route.
-5. All Cypress tests should go under the testing/cypress/e2e folder.
-6. All Cypress tests should use either Arrange-Act-Assert Pattern or the BDD version Given-When-Then but should not use both.
-7. Where Cypress Tests are not possible, create manual tests and add them to a .md document stating why it is not possible or why it is not a good idea to test in an automated fashion. 
+2. All tests should run using the existing package tooling for each test type. (Do not create new package scripts to run them)
+3. Spend no more than a few hours total on this exercise.
+
+### Cypress
+
+1. Create Cypress tests that test as much of the site as possible (Dashboard, Settings, Tables) Admin pages.
+2. All Cypress tests should be organized and created using BDD (Behavior Driven Development) methodology.
+3. All tests should be in files that represent their UI route.
+4. All Cypress tests should go under the testing/cypress/e2e folder.
+5. All Cypress tests should use either Arrange-Act-Assert Pattern or the BDD version Given-When-Then but should not use both.
+6. Where Cypress Tests are not possible, create manual tests and add them to a .md document stating why it is not possible or why it is not a good idea to test in an automated fashion. 
 
 Extra Points for:
 
@@ -20,6 +25,27 @@ Extra Points for:
 - Interception of Network Calls.
 - Aliasing of Intercepts.
 - Using Fixtures to represent data.
+
+### K6
+
+1. All Tests should be done against the [Public API](https://localhost:3002)
+2. Create any K6 tests necessary to demonstrate your knowledge of the [different testing types](https://k6.io/docs/test-types/)
+3. All tests should be properly organized representing the api's tested and the type of test.
+4. Tests should be documented as to their purpose. Please use jsdoc comments where possible.
+
+Extra Points For:
+
+- Breaking the API - Test those LIMITS!
+
+### Postman / Insomnia
+
+1. All Tests should be done against the [Public API](https://localhost:3002)
+2. Create a simple Postman and/or Insomnia Collection against the Public API and output a JSON file from the tools that can be imported to the `testing/postman` folder.
+
+Extra Points For:
+
+- Breaking the API - Test those LIMITS!
+- Writing a script to convert between the two.
 
 ## What's inside?
 
@@ -78,6 +104,12 @@ To develop all apps and packages, run the following command:
 ```
 pnpm run dev
 ```
+
+Doing so will launch the following:
+
+- [Web App](http://localhost:3000) - Main Web App for the QA Engineer Test
+- [Web App](http://localhost:3001) - Documentation Web App **(Not Yet Used)**
+- [Public API](http://localhost:3002) - Main REST API for the QA Engineer Test
 
 ### E2E Testing
 
