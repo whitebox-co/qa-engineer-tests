@@ -22,6 +22,7 @@ declare global {
 	namespace Cypress {
 		interface Chainable {
 			hasTitle(): Chainable<void>;
+			hasCorrectUrl(url: string, dataSelector: string): Chainable<Element>
 		}
 	}
 }
