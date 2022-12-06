@@ -99,6 +99,7 @@ export default function Sidebar() {
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
+                    data-cy="dashboard"
                   >
                     <i
                       className={
@@ -123,6 +124,7 @@ export default function Sidebar() {
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
+                    data-cy="settings"
                   >
                     <i
                       className={
@@ -147,6 +149,7 @@ export default function Sidebar() {
                         ? "text-lightBlue-500 hover:text-lightBlue-600"
                         : "text-blueGray-700 hover:text-blueGray-500")
                     }
+                    data-cy="tables"
                   >
                     <i
                       className={
