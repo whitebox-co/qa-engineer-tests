@@ -5,7 +5,7 @@ Cypress.Commands.add('hasTitle', () => {
 });
 
 Cypress.Commands.add('hasCorrectUrl', (url, dataSelector) => {
-	cy.visit(`${Cypress.config().baseUrl}${url}`)
+	cy.visit(url)
 	if(dataSelector) cy.get(`[data-cy=${dataSelector}]`).click();
 	cy.url().should("include", url);
 })

@@ -18,6 +18,22 @@ interface ApiCallParams {
 	method?: string;
 }
 
+interface User {
+	userName: string,
+    email: string,
+    name: {
+        firstName: Order["firstName"],
+        lastName: Order["lastName"]
+    },
+    address: {
+        street1: Order["street1"],
+        city: Order["city"],
+        state: Order["state"],
+        postalCode: Order["zip"]
+    },
+    aboutMe: string
+}
+
 declare global {
 	namespace Cypress {
 		interface Chainable {
@@ -25,4 +41,5 @@ declare global {
 			hasCorrectUrl(url: string, dataSelector: string): Chainable<Element>
 		}
 	}
+	var user: User;
 }
