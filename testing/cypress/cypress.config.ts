@@ -13,7 +13,7 @@ export default defineConfig({
 	defaultCommandTimeout: 60000,
 	downloadsFolder: './.dist/downloads',
 	fileServerFolder: './',
-	fixturesFolder: './.dist/fixtures',
+	fixturesFolder: './fixtures',
 	screenshotsFolder: './.dist/screenshots',
 	videosFolder: './.dist/videos',
 });

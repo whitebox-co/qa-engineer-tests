@@ -1,0 +1,15 @@
+{
+    "userName": "mel.price",
+    "email": "melissaashprice@gmail.com",
+    "name": {
+        "firstName": "Melissa",
+        "lastName": "Price"
+    },
+    "address": {
+        "street1": "2315 Super Street Apt. 302",
+        "city": "Baltimore",
+        "state": "MD",
+        "postalCode": "21218"
+    },
+    "aboutMe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae orci ipsum. Maecenas malesuada ex et nisi sodales finibus. Aliquam ultricies dignissim lacus id tempor. Duis sagittis rhoncus augue, at mollis turpis rutrum non. Donec ac faucibus ante. Nulla facilisi. In commodo diam in ligula aliquet tempus. Proin sodales quam."
+}
